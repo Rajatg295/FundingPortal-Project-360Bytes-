@@ -229,7 +229,6 @@ const Applyhere = () => {
   <label htmlFor="state">State:</label>
   <select id="state" name="state" value={formData.state} onChange={handleChange}>
     <option value="">Select</option>
-    {/* Add options for states here */}
   </select>
 </div>
 
@@ -237,8 +236,7 @@ const Applyhere = () => {
   <label htmlFor="district">District:</label>
   <select id="district" name="district" value={formData.district} onChange={handleChange}>
     <option value="">Select</option>
-    {/* Add options for districts here */}
-  </select>
+    </select>
 </div>
 
         <div>
