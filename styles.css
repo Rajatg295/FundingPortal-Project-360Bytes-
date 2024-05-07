@@ -1,0 +1,74 @@
+
+  .navbar-list li:hover {
+    background-color: lightgreen; 
+    border-radius: 5px; 
+}
+  
+.navbar {
+    display: flex;
+    justify-content: center;
+    margin-left: 250px;
+    margin-right: 250px;
+  }
+    .navbar-list {
+        list-style-type: none;
+        padding: 0px;
+        margin-top: 0; 
+        display: flex;
+      }
+      
+  .navbar-list li {
+    margin-right: 60px; 
+  }
+  
+  .navbar-list li:last-child {
+    margin-right: 0;
+  }
+  .navbar-list li a {
+    font-size: 18px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  header h1 {
+    margin-bottom: 5px; 
+  }
+  
+  header p {
+    margin: 0;
+  }
+
+.container {
+    display: flex;
+    height: 100vh;
+    margin-top: 50px;
+  }
+  .left-section{
+    margin-left: 50px;
+  }
+  .updates-container{
+    height: 400px;
+    width: 300px;
+    background-color: lightgrey;
+  }
+  .helpdesk-container{
+    height: 200px;
+    width: 300px;
+    background-color: lightgrey;
+  }
+  .middle-section{
+    margin-top: 20px;
+    height: 620px;
+    width: 500px;
+    background-color: lightgrey;
+    margin-left: 200px;
+  }
+  .right-section{
+    margin-top: 20px;
+    height: 420px;
+    width: 300px;
+    background-color: lightgrey;
+    margin-left: 150px;
+  }
