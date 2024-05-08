@@ -122,7 +122,7 @@ const LoginPage = ({ onLogin }) => {
 };
 
 const Home = ({ onLogin }) => {
-    const [loggedIn, setLoggedIn] = useState(false); // Define loggedIn state
+    const [loggedIn, setLoggedIn] = useState(false); 
 
     const handleLogin = () => {
       setLoggedIn(true); 
