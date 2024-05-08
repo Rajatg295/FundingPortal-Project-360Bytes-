@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Applyhere.css'
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar'
-import backgroundImage from './img3.jpg';
+import backgroundImage from './img4.jpg';
 import logo from './logo.png';  
 
 const logoStyle = {
