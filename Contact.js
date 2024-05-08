@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './ContactPage.css'; 
+import Navbar from './Navbar';
+import logo from './logo.png';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +25,14 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="contact-page-container">
+    
+    <div>
+      <header>
+      <h1 style={{ margin:'0'}}>NATIONAL SCHOLARSHIP PORTAL</h1>
+          <p>Government of India</p>
+          </header>
+      <Navbar/>
+      <div style={{marginTop:'50px'}} className="contact-page-container">
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -45,6 +54,7 @@ const ContactPage = () => {
         <button type="submit">Send Message</button>
       </form>
     </div>
+    </div>  
   );
 };
 

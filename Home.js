@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import backgroundImage from './img3.jpg';
 import logo from './logo.png';  
+import { Link } from 'react-router-dom';
 
 const logoStyle = {
   position: 'absolute',
   top: '20px', 
-  left: '20px', 
+  left: '20px',             
   width: '100px', 
   height: 'auto', 
 };
@@ -71,63 +72,63 @@ const DetailedDescription = () => {
   );
 };
 
-const UserLogin = ({ userType, onLogin }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const UserLogin = ({ userType, onLogin }) => {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    console.log(`Logging in as ${userType} with username: ${username} and password: ${password}`);
-    onLogin(); 
-  };
+    const handleLogin = (e) => {
+      e.preventDefault();
+      console.log(`Logging in as ${userType} with username: ${username} and password: ${password}`);
+      onLogin(); 
+    };
 
-  return (
-    <div className="user-login" style={{ textAlign: 'center', maxWidth: '300px', margin: '0 auto' }}>
-      <h2 style={{ marginBottom: '20px', color: 'green' }}>{userType} Login</h2>
-      <form onSubmit={handleLogin}>
-        <label style={{ marginBottom: '10px', display: 'block' }}>
-          Username:
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} style={{ marginLeft: '5px' }} />
-        </label>
-        <label style={{ marginBottom: '10px', display: 'block' }}>
-          Password:
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ marginLeft: '5px' }} />
-        </label>
-        <a href="#" style={{ display: 'block', marginBottom: '10px', color: 'blue', textDecoration: 'none' }}>Forgot Password?</a>
-        <button type="submit" style={{ backgroundColor: 'green', color: 'white', border: 'none', padding: '10px 20px', borderRadius: '5px' }}>Login</button>
-      </form>
-    </div>
-  );
-};
-
-const LoginPage = ({ onLogin }) => {
-  const [selectedUserType, setSelectedUserType] = useState('Student');
-
-  const handleLogin = () => {
-    onLogin(); 
-  };
-
-  return (
-    <div className="login-page">
-      <h2 style={{ marginLeft: '50px' }}>Select User Type</h2>
-      <div className="user-type-buttons" style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
-        <button className='btn' style={{ borderRadius: '5px', margin: '0 5px', color: 'white', backgroundColor: 'orange' }} onClick={() => setSelectedUserType('Student')}>Student</button>
-        <button className='btn' style={{ borderRadius: '5px', margin: '0 5px', color: 'white', backgroundColor: 'orange' }} onClick={() => setSelectedUserType('Institute')}>Institute</button>
-        <button className='btn' style={{ borderRadius: '5px', margin: '0 5px', color: 'white', backgroundColor: 'orange' }} onClick={() => setSelectedUserType('Ministry')}>Ministry</button>
-        <button className='btn' style={{ borderRadius: '5px', margin: '0 5px', color: 'white', backgroundColor: 'orange' }} onClick={() => setSelectedUserType('State')}>State</button>
+    return (
+      <div className="user-login" style={{ textAlign: 'center', maxWidth: '300px', margin: '0 auto' }}>
+        <h2 style={{ marginBottom: '20px', color: 'green' }}>{userType} Login</h2>
+        <form onSubmit={handleLogin}>
+          <label style={{ marginBottom: '10px', display: 'block' }}>
+            Username:
+            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} style={{ marginLeft: '5px' }} />
+          </label>
+          <label style={{ marginBottom: '10px', display: 'block' }}>
+            Password:
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} style={{ marginLeft: '5px' }} />
+          </label>
+          <a href="#" style={{ display: 'block', marginBottom: '10px', color: 'blue', textDecoration: 'none' }}>Forgot Password?</a>
+          <button type="submit" style={{ backgroundColor: 'green', color: 'white', border: 'none', padding: '10px 20px', borderRadius: '5px' }}>Login</button>
+        </form>
       </div>
-      {selectedUserType && <UserLogin userType={selectedUserType} onLogin={handleLogin} />}
-    </div>
-  );
-};
+    );
+  };
 
-const Home = ({ onLogin }) => {
-    const [loggedIn, setLoggedIn] = useState(false); 
+  const LoginPage = ({ onLogin }) => {
+    const [selectedUserType, setSelectedUserType] = useState('Student');
 
     const handleLogin = () => {
-      setLoggedIn(true); 
+      onLogin(); 
     };
-  
+
+    return (
+      <div className="login-page">
+        <h2 style={{ marginLeft: '50px' }}>Select User Type</h2>
+        <div className="user-type-buttons" style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+          <button className='btn' style={{ borderRadius: '5px', margin: '0 5px', color: 'white', backgroundColor: 'orange' }} onClick={() => setSelectedUserType('Student')}>Student</button>
+          <button className='btn' style={{ borderRadius: '5px', margin: '0 5px', color: 'white', backgroundColor: 'orange' }} onClick={() => setSelectedUserType('Institute')}>Institute</button>
+          <button className='btn' style={{ borderRadius: '5px', margin: '0 5px', color: 'white', backgroundColor: 'orange' }} onClick={() => setSelectedUserType('Ministry')}>Ministry</button>
+          <button className='btn' style={{ borderRadius: '5px', margin: '0 5px', color: 'white', backgroundColor: 'orange' }} onClick={() => setSelectedUserType('State')}>State</button>
+        </div>
+        {selectedUserType && <UserLogin userType={selectedUserType} onLogin={handleLogin} />}
+      </div>
+    );
+  };
+
+  const Home = ({ onLogin }) => {
+      const [loggedIn, setLoggedIn] = useState(false); 
+
+      const handleLogin = () => {
+        setLoggedIn(true); 
+      };
+    
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,
     backgroundRepeat: 'no-repeat',
@@ -138,6 +139,9 @@ const Home = ({ onLogin }) => {
   
   return (
     <div style={backgroundStyle}>
+      <div className='login-page'>
+        <Link to ="/applyhere">Applyhere</Link>
+
       <header>  
         <div style={{color:'white'}}>
         <img src={logo} alt="Logo" style={logoStyle} />
@@ -164,6 +168,7 @@ const Home = ({ onLogin }) => {
           
         </div>
       </div>
+    </div>
     </div>
   );
 };

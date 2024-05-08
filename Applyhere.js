@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './Applyhere.css'
+import { Link } from 'react-router-dom';
 
 const Applyhere = () => {
+ 
   const [formData, setFormData] = useState({
     aadharNumber: '',
     category: '',
@@ -101,12 +103,21 @@ const Applyhere = () => {
       twelfthMarksheet: '',
     });
   };
-
+  const buttonStyle = {
+    display: 'inline-block',
+    backgroundColor: 'red',
+    color: 'white',
+    borderRadius: '5px',
+    width: '150px',
+    height: '30px',
+    textDecoration: 'none',
+  };
   return (
+    
         <div className='form-container'>
     <h2>Apply Here</h2>
     <form onSubmit={handleSubmit}>
-        
+    
       <div>
         <label htmlFor="aadharNumber">Aadhar Number:</label>
         <input type="text" id="aadharNumber" name="aadharNumber" value={formData.aadharNumber} onChange={handleChange} />
@@ -236,7 +247,7 @@ const Applyhere = () => {
   <label htmlFor="district">District:</label>
   <select id="district" name="district" value={formData.district} onChange={handleChange}>
     <option value="">Select</option>
-    </select>
+  </select>
 </div>
 
         <div>
@@ -322,7 +333,12 @@ const Applyhere = () => {
         <button type="submit">Submit</button>
         <button type="button" onClick={handleReset}>Reset</button>
       </form>
+      <div style={{ textAlign: 'center', marginTop:'4vh' }}>
+      <Link to="/" style={buttonStyle}>Back to Homepage</Link>
     </div>
+    </div>
+    
+    
   );
 };
 
