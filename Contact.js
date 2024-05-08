@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './ContactPage.css'; 
 import Navbar from './Navbar';
 import logo from './logo.png';
+import backgroundImage from './img5.jpg'
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -23,10 +24,18 @@ const ContactPage = () => {
     e.preventDefault();
     console.log(formData); 
   };
+const backgroundStyle = {
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover',
+  minHeight: '100vh', 
+};
 
   return (
     
-    <div>
+    <div style={backgroundStyle}>
+      
       <header>
       <h1 style={{ margin:'0'}}>NATIONAL SCHOLARSHIP PORTAL</h1>
           <p>Government of India</p>
