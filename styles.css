@@ -1,14 +1,14 @@
 
   .navbar-list li:hover {
-    background-color: lightgreen; 
+    background-color: rgb(12, 33, 119); 
     border-radius: 5px; 
 }
   
 .navbar {
     display: flex;
     justify-content: center;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
     .navbar-list {
         list-style-type: none;
