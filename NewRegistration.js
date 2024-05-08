@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './NewRegistration.css';
-import backgroundImage from './img3.jpg';
+import backgroundImage from './img2.jpg';
 import logo from './logo.png';  
 import { Link } from 'react-router-dom';
 
