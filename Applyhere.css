@@ -1,6 +1,7 @@
 .form-container {
+  margin-top: 30px;
   max-width: 600px;
-  margin: 0 auto;
+  margin-left: 400px;
   padding: 40px;
   background-color: #f3f4f6;
   border-radius: 10px;
@@ -12,6 +13,7 @@
   font-weight: bold;
   margin-bottom: 20px;
   color: #333;
+  text-align: center ;
 }
 
 .form-container form {
@@ -44,7 +46,7 @@
 .form-container button[type="button"] {
   width: 100%;
   padding: 10px;
-  background-color: #6c63ff;
+  background-color: #2d8d1c;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -52,11 +54,12 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 .form-container button[type="submit"]:hover,
 .form-container button[type="button"]:hover {
-  background-color: #564fd7;
+  background-color: hsl(36, 63%, 58%);
 }
 
 .form-container input[type="checkbox"] {
@@ -67,4 +70,8 @@
 .form-container input[type="checkbox"] + label {
   color: #333;
 }
+.ApplyNavbar{
+  margin-top: 30px;
+}
+
 
