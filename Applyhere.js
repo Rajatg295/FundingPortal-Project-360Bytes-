@@ -131,6 +131,13 @@ const Applyhere = () => {
   };
   return (
     <div style={backgroundStyle}>
+      <header>  
+        <div style={{color:'white'}}>
+          <img src={logo} alt="Logo" style={logoStyle} />
+          <h1 style={{ margin:'0'}}>NATIONAL SCHOLARSHIP PORTAL</h1>
+          <p>Government of India</p>
+        </div>
+      </header>
       <div  style={{margin:'0'}}className='ApplyNavbar'>
         <Navbar/>
       
