@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './NewRegistration.css';
 import backgroundImage from './img3.jpg';
 import logo from './logo.png';  
+import { Link } from 'react-router-dom';
 
 const logoStyle = {
   position: 'absolute',
@@ -120,7 +121,15 @@ const Registration = () => {
 const handleClosePopup = () => {
     setIsRegistered(false);
   };
-
+  const buttonStyle = {
+    display: 'inline-block',
+    backgroundColor: 'red',
+    color: 'white',
+    borderRadius: '5px',
+    width: '150px',
+    height: '30px',
+    textDecoration: 'none',
+  };
   return (
     <div className="registration-container">
       <h2>Registration Form</h2>
@@ -188,11 +197,14 @@ const handleClosePopup = () => {
         </div>
         <button type="submit">Register</button>
         <button type="button" onClick={handleReset}>Reset</button>
+        <div style={{ textAlign: 'center', marginTop:'4vh' }}>
+      <Link to="/" style={buttonStyle}>Back to Homepage</Link>
+    </div>
       </form>
       {isRegistered && <RegistrationSuccessPopup aadharNumber={formData.aadharNumber} onClose={handleClosePopup} />}
 
     </div>
-      );
+  );
 };
 
 export default App;
