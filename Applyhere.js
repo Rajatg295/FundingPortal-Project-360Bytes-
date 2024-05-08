@@ -1,9 +1,26 @@
 import React, { useState } from 'react';
 import './Applyhere.css'
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar'
+import backgroundImage from './img3.jpg';
+import logo from './logo.png';  
+
+const logoStyle = {
+  position: 'absolute',
+  top: '20px', 
+  left: '20px',             
+  width: '100px', 
+  height: 'auto', 
+};
 
 const Applyhere = () => {
- 
+  const backgroundStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    minHeight: '100vh', 
+  };
   const [formData, setFormData] = useState({
     aadharNumber: '',
     category: '',
@@ -113,8 +130,12 @@ const Applyhere = () => {
     textDecoration: 'none',
   };
   return (
-    
+    <div style={backgroundStyle}>
+      <div  style={{margin:'0'}}className='ApplyNavbar'>
+        <Navbar/>
+      
         <div className='form-container'>
+          
     <h2>Apply Here</h2>
     <form onSubmit={handleSubmit}>
     
@@ -337,8 +358,8 @@ const Applyhere = () => {
       <Link to="/" style={buttonStyle}>Back to Homepage</Link>
     </div>
     </div>
-    
-    
+    </div>
+    </div>
   );
 };
 
