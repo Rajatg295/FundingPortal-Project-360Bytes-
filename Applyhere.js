@@ -205,9 +205,10 @@ const Applyhere = () => {
           />
           <label htmlFor="isAllDetailsTrue">I confirm that all details provided above are true.</label>
         </div>
-
-        <button type="submit">Submit</button>
-        <button type="button" onClick={handleReset}>Reset</button>
+      <div className='btn-end'>
+        <button style={{width:'150px',marginRight:'20px'}} type="submit">Submit</button>
+        <button style={{width:'150px'}} type="button" onClick={handleReset}>Reset</button>
+        </div>
       </form>
       <div style={{ textAlign: 'center', marginTop:'4vh' }}>
       <Link to="/" style={buttonStyle}>Back to Homepage</Link>
