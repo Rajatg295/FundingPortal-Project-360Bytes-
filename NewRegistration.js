@@ -1,17 +1,50 @@
 import React, { useState } from 'react';
 import './NewRegistration.css';
+import backgroundImage from './img3.jpg';
+import logo from './logo.png';  
+
+const logoStyle = {
+  position: 'absolute',
+  top: '20px', 
+  left: '20px', 
+  width: '100px', 
+  height: 'auto', 
+};
+
+const App = () => {
+  const backgroundStyle = {
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    minHeight: '100vh', 
+  };
+
+  return (
+    <div style={backgroundStyle}>
+      <header>  
+        <div style={{color:'white'}}>
+          <img src={logo} alt="Logo" style={logoStyle} />
+          <h1 style={{ margin:'0'}}>NATIONAL SCHOLARSHIP PORTAL</h1>
+          <p>Government of India</p>
+        </div>
+      </header>
+      <Registration />
+    </div>
+  );
+};
 
 const RegistrationSuccessPopup = ({ aadharNumber, onClose }) => {
-    return (
-      <div className="popup-container">
-        <div className="popup-content">
-          <h3>Registration Successful!</h3>
-          <p>Your UID (Aadhar Number) is: {aadharNumber}</p>
-          <button onClick={onClose}>Continue to Login</button>
-        </div>
+  return (
+    <div className="popup-container">
+      <div className="popup-content">
+        <h3>Registration Successful!</h3>
+        <p>Your UID (Aadhar Number) is: {aadharNumber}</p>
+        <button onClick={onClose}>Continue to Login</button>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -159,7 +192,7 @@ const handleClosePopup = () => {
       {isRegistered && <RegistrationSuccessPopup aadharNumber={formData.aadharNumber} onClose={handleClosePopup} />}
 
     </div>
-  );
+      );
 };
 
-export default Registration;
+export default App;

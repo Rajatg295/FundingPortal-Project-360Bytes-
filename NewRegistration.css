@@ -1,69 +1,84 @@
 
 .registration-container {
-  max-width: 500px;
   margin: 0 auto;
+  max-width: 600px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center; 
 }
 
 .registration-container h2 {
-  text-align: center;
   margin-bottom: 20px;
-  color: #333;
 }
 
 .registration-container form {
-  display: grid;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.registration-container form > div {
+  margin: 0 10px;
+  flex: 1 1 45%;
 }
 
 .registration-container form label {
   font-weight: bold;
-  display: block;
 }
 
-.registration-container form input[type="text"],
-.registration-container form input[type="email"],
-.registration-container form input[type="password"],
+.registration-container form input,
 .registration-container form select {
-  width: 200px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  width: 100%;
+  padding: 8px;
   border-radius: 5px;
-}
-
-.registration-container form select {
-  appearance: none;
-  padding-right: 30px;
-  background-image: url('data:image/svg+xml;utf8,<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>');
-  background-repeat: no-repeat;
-  background-position: right 10px center;
+  border: 1px solid #ccc;
+  margin-top: 5px;
 }
 
 .registration-container form button {
   width: 100%;
   padding: 10px;
+  background-color: #4caf50;
+  color: white;
   border: none;
   border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-.registration-container form button[type="reset"] {
-  background-color: #f44336;
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.registration-container button[type="submit"]:hover,
-.registration-container button[type="reset"]:hover {
-  opacity: 0.8;
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-@media (min-width: 768px) {
-  .registration-container form {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.popup-content h3 {
+  margin-top: 0;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
 }
