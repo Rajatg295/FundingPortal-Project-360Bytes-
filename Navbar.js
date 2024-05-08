@@ -17,12 +17,8 @@ const Navbar = () => {
         <li style={{ display: 'inline-block', margin: '0 10px' }}>
           <Link to="/registration" style={{ color: 'white', textDecoration: 'none' }}>New Registration</Link>
         </li>
-        <li style={{ display: 'inline-block', margin: '0 10px' }}>
-          <Link to="/applyhere" style={{ color: 'white', textDecoration: 'none' }}>Apply Here</Link>
-        </li>
-        <li style={{ display: 'inline-block', margin: '0 10px' }}>
-          <Link to="/studenthomepage" style={{ color: 'white', textDecoration: 'none' }}>Student Login</Link>
-        </li>
+        
+       
       </ul>
     </nav>
   );
